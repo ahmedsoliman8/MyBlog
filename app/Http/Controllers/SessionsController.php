@@ -18,6 +18,8 @@ class SessionsController extends Controller
             'password' => 'required'
         ]);
 
+      //  return  $attributes;
+
         if (! auth()->attempt($attributes)) {
             throw ValidationException::withMessages([
                 'email' => 'Your provided credentials could not be verified.'
